@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useState } from "react"
+import ScrollLink from "./scroll-link"
 
 export default function navbar() {
 
@@ -22,13 +23,13 @@ export default function navbar() {
             <div className={`w-full md:block md:w-auto items-center ${openMobileMenu ? 'block' : 'hidden'} transition-all duration-300 ease-in-out`}>
                 <ul className="flex flex-col md:flex-row md:justify-end md:space-x items-center space-y-4 md:space-y-0 md:space-x-16">
                     <li>
-                        <h2 className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">About</h2>
+                        <ScrollLink targetId="about" className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">About</ScrollLink>
                     </li>
                     <li>
-                        <h2 className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">Skills</h2>
+                        <ScrollLink targetId="" className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">Skills</ScrollLink>
                     </li>
                     <li>
-                        <Link href="resume.pdf">
+                        <Link href="Resume.pdf">
                             <h2 className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">Resume</h2>
                         </Link>
                     </li>
