@@ -1,4 +1,3 @@
-// components/SmoothScrollLink.js
 import { MouseEvent } from "react";
 import Link from 'next/link';
 

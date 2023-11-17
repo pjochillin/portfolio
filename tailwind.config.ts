@@ -13,7 +13,8 @@ const config: Config = {
       "black": "#000000",
       "dark_bg": "#252734",
       "secondary_white": "#e9e9eb",
-      "theme_gray": "#9c9ca3"
+      "theme_gray": "#9c9ca3",
+      "theme_lightgray": "#424657"
     }
   },
   plugins: [],

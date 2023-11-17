@@ -26,7 +26,7 @@ export default function navbar() {
                         <ScrollLink targetId="about" className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">About</ScrollLink>
                     </li>
                     <li>
-                        <ScrollLink targetId="" className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">Skills</ScrollLink>
+                        <ScrollLink targetId="works" className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">Works</ScrollLink>
                     </li>
                     <li>
                         <Link href="Resume.pdf">

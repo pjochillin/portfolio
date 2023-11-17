@@ -35,7 +35,7 @@ export default function profile() {
                     </Link>
                 </div>
             </div>
-            <div className="z-0 hidden md:block z-0 absolute top-0 left-1/2 -translate-x-1/2">
+            <div className="z-0 hidden min-[900px]:block z-0 absolute top-0 left-1/2 -translate-x-1/2">
                 <ProfileImage />
             </div>
         </div>

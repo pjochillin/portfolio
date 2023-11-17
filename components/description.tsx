@@ -1,8 +1,9 @@
 import Link from "next/link"
+import SkillBox from "./skill-box"
 
 export default function description() {
     return (
-        <div className="z-10 mt-40 bg-dark_bg min-w-screen min-h-[880px]">
+        <div className="z-10 mt-40 bg-dark_bg min-w-screen">
             <div className="relative flex flex-col min-[750px]:flex-row">
                 <div className="pt-40 ml-[8%] mr-[8%] min-[750px]:mr-[4%] basis-3/12">
                     <h1 id="about" className="font-medium tracking-[0.3rem] text-theme_gray">— About</h1>
@@ -28,6 +29,11 @@ export default function description() {
                 <Link href="mailto:jo447@cornell.edu" className="text-3xl text-theme_green underline underline-offset-[6px]">
                     →
                 </Link>
+            </div>
+            <div className="relative pb-6 min-[750px]:pb-0 min-[750px]:top-24 mt-24 mx-[30%] min-[750px]:mx-0 flex flex-col min-[750px]:flex-row justify-center space-y-6 min-[750px]:space-y-0 min-[750px]:space-x-6">
+                <SkillBox text="Software Developer" /> 
+                <SkillBox text="Coding Instructor" /> 
+                <SkillBox text="Concert Cellist" /> 
             </div>
         </div>
     )
