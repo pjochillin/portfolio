@@ -20,7 +20,7 @@ export default function navbar() {
                 </svg>
             </button>
             
-            <div className={`w-full md:block md:w-auto items-center ${openMobileMenu ? 'block' : 'hidden'} transition-all duration-300 ease-in-out`}>
+            <div className={`w-full md:block md:w-auto items-center on-all duration-300 ease-in-out ${openMobileMenu ? 'block' : 'hidden'}`}>
                 <ul className="flex flex-col md:flex-row md:justify-end md:space-x items-center space-y-4 md:space-y-0 md:space-x-16">
                     <li>
                         <ScrollLink targetId="about" className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">About</ScrollLink>

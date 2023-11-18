@@ -14,7 +14,8 @@ const config: Config = {
       "dark_bg": "#252734",
       "secondary_white": "#e9e9eb",
       "theme_gray": "#9c9ca3",
-      "theme_lightgray": "#424657"
+      "theme_lightgray": "#424657",
+      "dropdown_bg": "#484c63"
     }
   },
   plugins: [],
