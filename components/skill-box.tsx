@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef, useLayoutEffect } from "react"
 
 interface SkillBoxProps {
     text: string;
@@ -12,7 +12,6 @@ type WidthDimension = {
 }
 
 export default function skillBox({ text }: SkillBoxProps) {
-
     const skillPairs: Record<string, string> = {
         "Software Developer": "code-off_white-icon",
         "Concert Cellist": "cello-icon",
@@ -29,7 +28,7 @@ export default function skillBox({ text }: SkillBoxProps) {
         const [windowDimensions, setWindowDimensions] = useState<WidthDimension>({
             width: undefined
         });
-
+    
         useEffect(() => {
             function handleResize(): void {
                 setWindowDimensions({
@@ -40,7 +39,7 @@ export default function skillBox({ text }: SkillBoxProps) {
             window.addEventListener('resize', handleResize);
             return (): void => window.removeEventListener('resize', handleResize);
         }, []);
-
+    
         return windowDimensions.width;
     }
 
@@ -71,7 +70,7 @@ export default function skillBox({ text }: SkillBoxProps) {
                 return 15;
             }
         }
-        return 15
+        return 15;
     }
 
     return (

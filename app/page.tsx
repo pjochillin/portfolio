@@ -10,6 +10,7 @@ export default function Home() {
       <div className='z-10 relative'>
         <Description />
       </div>
+      <div className='min-h-[300px]'></div>
     </div>
   )
   

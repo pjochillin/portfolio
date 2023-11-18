@@ -1,7 +1,51 @@
+"use client"
+
 import Link from "next/link"
 import SkillBox from "./skill-box"
+import { useRef, useEffect } from "react"
+import { useWindowSize } from "react-use"
 
 export default function description() {
+    const skillBoxContainerRef = useRef<HTMLDivElement | null>(null);
+    const { width } = useWindowSize();
+  
+    const updateMargin = () => {
+        const containerRef = skillBoxContainerRef.current;
+      
+        if (containerRef) {
+            const totalHeight = containerRef.offsetHeight;
+            // Adjust for any additional margin or padding if needed
+            // You can also set it to 0 if you want to match the exact height
+            const marginBottomValue = totalHeight / 2; 
+      
+            // Set the marginBottom style
+            if (width >= 750) {
+                containerRef.style.top = `${marginBottomValue}px`;
+                containerRef.style.marginTop = `${marginBottomValue}px`;
+                containerRef.style.paddingBottom = "0";
+            } else {
+                containerRef.style.top = "0px";
+                containerRef.style.marginTop = "6rem";
+                containerRef.style.paddingBottom = "4rem";
+            }
+        }
+    }
+
+    useEffect(() => {
+        const handleResize = () => {
+            updateMargin()
+        }
+        handleResize();
+
+        // Add event listener for window resize
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [width]);
+
     return (
         <div className="z-10 mt-40 bg-dark_bg min-w-screen">
             <div className="relative flex flex-col min-[750px]:flex-row">
@@ -30,7 +74,8 @@ export default function description() {
                     →
                 </Link>
             </div>
-            <div className="relative pb-6 min-[750px]:pb-0 min-[750px]:top-24 mt-24 mx-[30%] min-[750px]:mx-0 flex flex-col min-[750px]:flex-row justify-center space-y-6 min-[750px]:space-y-0 min-[750px]:space-x-6">
+            {/* min-[750px]:top-24 mt-24 */}
+            <div ref={skillBoxContainerRef} className={`relative mb-6 mx-[30%] min-[750px]:mx-0 flex flex-col min-[750px]:flex-row justify-center space-y-6 min-[750px]:space-y-0 min-[750px]:space-x-6`}>
                 <SkillBox text="Software Developer" /> 
                 <SkillBox text="Coding Instructor" /> 
                 <SkillBox text="Concert Cellist" /> 
