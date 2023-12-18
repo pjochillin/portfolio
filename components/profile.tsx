@@ -2,12 +2,39 @@ import Image from 'next/image'
 import ProfileImage from './profile-image'
 import Link from "next/link"
 import NavBar from './navbar'
+import { useState, useEffect } from "react"
+import { useWindowSize } from 'react-use'
 
 export default function profile() {
+    const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  
+    const toggleMobileMenu = () => {
+        setOpenMobileMenu(!openMobileMenu);
+    };
+
+    
+    const { width } = useWindowSize();
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const handleResize = () => {
+                if (width > 767 && openMobileMenu) {
+                    toggleMobileMenu();
+                }
+            }
+             
+            window.addEventListener("resize", handleResize);
+    
+            return () => {
+                window.removeEventListener("resize", handleResize);
+            };
+        }
+    }, [width]);
+
     return (
         <div className="relative ml-[8%] mr-[8%] mt-8 md:mt-32">
             <div className="z-10 relative">
-                <NavBar />
+                <NavBar toggleMobileMenu={toggleMobileMenu} openMobileMenu={openMobileMenu}/>
                 <Image 
                     src="/images/code-icon.png"
                     height={144}
@@ -35,7 +62,7 @@ export default function profile() {
                     </Link>
                 </div>
             </div>
-            <div className="z-0 hidden min-[900px]:block z-0 absolute top-0 left-1/2 -translate-x-1/2">
+            <div className={`z-0 z-0 absolute ${openMobileMenu ? "top-56" : "top-16"} min:[767px]:top-0 min-[900px]:left-1/2 translate-x-[9%] min-[900px]:-translate-x-1/2`}>
                 <ProfileImage />
             </div>
         </div>

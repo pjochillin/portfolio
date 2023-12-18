@@ -1,17 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
 import ScrollLink from "./scroll-link"
 
-export default function navbar() {
-
-    const [openMobileMenu, setOpenMobileMenu] = useState(false);
-
-    const toggleMobileMenu = () => {
-        setOpenMobileMenu(!openMobileMenu);
-    };
-
+export default function navbar({ toggleMobileMenu, openMobileMenu } : {toggleMobileMenu: () => void, openMobileMenu: boolean}) {
     return (
         <nav className="top-0 w-full">
             <button type="button" onClick={toggleMobileMenu} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-off_white rounded-lg md:hidden hover:bg-theme_green focus:outline-none focus:ring-2 focus:off_white dark:hover:bg-theme_green dark:focus:theme_green" aria-controls="navbar-default" aria-expanded="false">

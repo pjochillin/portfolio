@@ -44,7 +44,7 @@ export default function description() {
     }, [width]);
 
     return (
-        <div className="z-10 mt-40 bg-dark_bg min-w-screen min-h-[880px]">
+        <div className="z-10 mt-32 min-[400px]:mt-40 bg-dark_bg min-w-screen min-h-[880px]">
             <div className="relative flex flex-col min-[750px]:flex-row">
                 <div className="pt-40 ml-[8%] mr-[8%] min-[750px]:mr-[4%] basis-3/12">
                     <h1 id="about" className="font-medium tracking-[0.3rem] text-theme_gray">— About</h1>

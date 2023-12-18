@@ -8,6 +8,8 @@ export default function profilePicture() {
                 width = {1152 / 1.5}
                 height = {2454 / 1.5}
                 alt = ""
+                priority
+                style={{ width: "auto" }}
             />
         </div>
     )
