@@ -61,7 +61,7 @@ export default function celloModal({ closeCelloModal } : {closeCelloModal: () =>
                         images below to view various recordings from over the years.
                     </div>
 
-                    <div className="relative self-center h-1/4 w-1/2 mb-10">
+                    <div className="relative self-center h-1/4 w-5/6 min-[900px]:w-1/2 mb-10">
                         <a href={links[currentImageIndex]} target="_blank">
                             <img
                                 src={images[currentImageIndex]}

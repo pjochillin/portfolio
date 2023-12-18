@@ -61,7 +61,7 @@ export default function rotcModal({ closeRotcModal } : {closeRotcModal: () => vo
                             the Army Combat Fitness Test with a score of 591 out of a total 600 points.
                     </div>
 
-                    <div className="relative self-center h-1/4 w-1/2 mb-10">
+                    <div className="relative self-center h-1/4 w-5/6 min-[900px]:w-1/2 mb-10">
                         <img
                             src={images[currentImageIndex]}
                             alt={`Image ${currentImageIndex + 1}`}
