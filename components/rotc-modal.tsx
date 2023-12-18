@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react"
 import { useWindowSize } from "react-use"
 
 export default function rotcModal({ closeRotcModal } : {closeRotcModal: () => void}) {
-    const images: string[] = ["/images/rotc-1.jpg", "/images/rotc-2.jpeg"];
+    const images: string[] = ["/images/rotc-1.png", "/images/rotc-2.png"];
 
     const bottomRef = useRef<HTMLDivElement>(null);
 
