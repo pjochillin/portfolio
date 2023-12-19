@@ -1,8 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import { useWindowSize } from "react-use"
+import { StaticImageData } from "next/image"
+import Image from "next/image"
+import rotc1 from "../public/images/rotc-1.png"
+import rotc2 from "../public/images/rotc-2.png"
 
 export default function rotcModal({ closeRotcModal } : {closeRotcModal: () => void}) {
-    const images: string[] = ["/images/rotc-1.png", "/images/rotc-2.png"];
+    const images: StaticImageData[] = [rotc1, rotc2];
 
     const bottomRef = useRef<HTMLDivElement>(null);
 
@@ -62,7 +66,7 @@ export default function rotcModal({ closeRotcModal } : {closeRotcModal: () => vo
                     </div>
 
                     <div className="relative self-center h-1/4 w-5/6 min-[900px]:w-1/2 mb-10">
-                        <img
+                        <Image
                             src={images[currentImageIndex]}
                             alt={`Image ${currentImageIndex + 1}`}
                             className="w-full"

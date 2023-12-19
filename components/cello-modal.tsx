@@ -1,9 +1,14 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import { useWindowSize } from "react-use"
+import { StaticImageData } from "next/image"
+import Image from "next/image"
+import cello1 from "../public/images/cello-1.png"
+import cello2 from "../public/images/cello-2.png"
+import cello3 from "../public/images/cello-3.png"
 
 export default function celloModal({ closeCelloModal } : {closeCelloModal: () => void}) {
-    const images: string[] = ["/images/cello-1.png", "/images/cello-2.png"];
-    const links: string[] = ["https://youtu.be/NZ7Zypkejeos", "https://youtu.be/-Sux4OGaQek"]
+    const images: StaticImageData[] = [cello1, cello2, cello3];
+    const links: string[] = ["https://youtu.be/NZ7Zypkejeos", "https://youtu.be/-Sux4OGaQek", "/audio/brahms-cello-sonata-1.m4a"]
 
     const bottomRef = useRef<HTMLDivElement>(null);
 
@@ -63,7 +68,7 @@ export default function celloModal({ closeCelloModal } : {closeCelloModal: () =>
 
                     <div className="relative self-center h-1/4 w-5/6 min-[900px]:w-1/2 mb-10">
                         <a href={links[currentImageIndex]} target="_blank">
-                            <img
+                            <Image
                                 src={images[currentImageIndex]}
                                 alt={`Image ${currentImageIndex + 1}`}
                                 className="w-full hover:cursor-pointer"
