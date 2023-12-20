@@ -21,7 +21,7 @@ export default function navbar({ toggleMobileMenu, openMobileMenu } : {toggleMob
                         <ScrollLink targetId="works" className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">Works</ScrollLink>
                     </li>
                     <li>
-                        <Link href="Resume.pdf">
+                        <Link href="resume.pdf">
                             <h2 className="text-4xl text-off_white transition duration-300 ease-in-out hover:text-theme_green">Resume</h2>
                         </Link>
                     </li>
