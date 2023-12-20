@@ -46,8 +46,8 @@ export default function rotcModal({ closeRotcModal } : {closeRotcModal: () => vo
     }, [height, currentImageIndex, escModal]);
 
     return (
-        <div id="activity-modal" className="z-50 fixed top-0 left-0 min-w-full min-h-full flex flex-col items-center justify-center bg-black-rgba overflow-y-auto">
-            <div id="modalBody" className={`absolute opacity-100 w-10/12 min-[750px]:w-6/12 bg-theme_gray rounded-xl`}>
+        <div id="activity-modal" className="z-50 fixed top-0 left-0 min-w-full min-h-full flex flex-col items-center justify-center bg-black-rgba">
+            <div id="modalBody" className={`absolute opacity-100 w-10/12 min-[750px]:w-6/12 bg-theme_gray max-h-full rounded-xl overflow-y-auto`}>
                 <div id="modalTop" className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                     <h3 id="modalHeader" className="text-xl font-semibold text-secondary_white">
                         Cornell Army ROTC
