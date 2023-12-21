@@ -6,6 +6,7 @@ import Works from '../components/works'
 import RotcModal from '../components/rotc-modal'
 import CelloModal from '../components/cello-modal'
 import Footer from "../components/footer"
+import Head from "next/head"
 import { useState } from "react"
 
 export default function Home() {
@@ -31,6 +32,13 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Josh Ochalek's Portfolio</title>
+        <meta 
+          name="description"
+          content="Hello! I'm Josh, a first-year student at Cornell University. Check out my portfolio!"
+        />
+      </Head>
       <div className='z-50 relative'>
         { isRotcOpen && <RotcModal closeRotcModal={closeRotcModal} /> ||
           isCelloOpen && <CelloModal closeCelloModal={closeCelloModal} /> }
