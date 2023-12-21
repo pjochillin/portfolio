@@ -50,7 +50,7 @@ export default function description() {
                     <h1 id="about" className="font-medium tracking-[0.3rem] text-theme_gray">— About</h1>
                     <h1 className="pt-7 text-2xl min-[1000px]:text-4xl text-secondary_white">About</h1>
                     <p className="text-theme_gray text-md min-[1000px]:text-lg mt-10 min-[1000px]:mt-24 min-[1100px]:mt-16 min-[1300px]:mt-10 leading-loose">
-                        My name is Joshua Ochalek. I am a first-year student at Cornell University studying Computer Science and Italian.
+                        My name is Joshua Ochalek. I am a first-year student at Cornell University studying Computer Science, Music, and Italian.
                         I aspire to be both an innovator and mentor, someone who motivates others while creating the technology of the future. 
                     </p>
                 </div>
@@ -67,7 +67,7 @@ export default function description() {
                 <Link href="mailto:jo447@cornell.edu" className="inline text-3xl text-theme_green underline underline-offset-[6px]">
                     jo447@cornell.edu
                 </Link>
-                <Link href="mailto:jo447@cornell.edu" className="text-3xl text-theme_green underline underline-offset-[6px]">
+                <Link href="mailto:jo447@cornell.edu" className="hidden min-[360px]:inline text-3xl text-theme_green underline underline-offset-[6px]">
                     →
                 </Link>
             </div>

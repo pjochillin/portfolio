@@ -5,6 +5,7 @@ import Description from '../components/description'
 import Works from '../components/works'
 import RotcModal from '../components/rotc-modal'
 import CelloModal from '../components/cello-modal'
+import Footer from "../components/footer"
 import { useState } from "react"
 
 export default function Home() {
@@ -42,6 +43,9 @@ export default function Home() {
       </div>
       <div className='z-0 relative'>
         <Works openRotcModal={openRotcModal} openCelloModal={openCelloModal} />
+      </div>
+      <div className='z-0 relative'>
+        <Footer />
       </div>
     </div>
   )
