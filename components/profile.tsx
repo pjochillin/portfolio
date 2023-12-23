@@ -33,6 +33,10 @@ export default function profile() {
 
     return (
         <div className="relative ml-[8%] mr-[8%] mt-8 md:mt-32">
+            <div className="absolute top-0 -left-4 w-4/6 h-4/6 bg-theme_green rounded-full mix-blend-multiply filter blur-xl opacity-[5%] animate-blob overflow-hidden"></div>
+            <div className="absolute top-0 -right-4 w-4/6 h-4/6 bg-theme_green rounded-full mix-blend-multiply filter blur-xl opacity-[5%] animate-blob overflow-hidden"></div>
+            <div className="absolute -bottom-12 left-20 w-4/6 h-4/6 bg-theme_green rounded-full mix-blend-multiply filter blur-xl opacity-[5%] animate-blob overflow-hidden"></div>
+            <div className="absolute -bottom-12 right-20 w-4/6 h-4/6 bg-theme_green rounded-full mix-blend-multiply filter blur-xl opacity-[5%] animate-blob overflow-hidden"></div>
             <div className="z-10 relative">
                 <NavBar toggleMobileMenu={toggleMobileMenu} openMobileMenu={openMobileMenu}/>
                 <Image 
