@@ -62,8 +62,9 @@ export default function celloModal({ closeCelloModal } : {closeCelloModal: () =>
                 </div>
                 <div id="modalBottom" className="relative flex flex-col justify-center rounded-b-xl">
                     <div className="py-10 px-10 text-sm min-[750px]:text-base">
-                        As a college cellist who has studied for several years, I have played all kinds of repertoire, from Lalo to Haydn. Click on the
-                        images below to view various recordings from over the years.
+                        As a college cellist who has studied for several years, I have played all kinds of repertoire, from Bach to Beethoven and Brahms.
+                        I have studied with John Haines-Eitzen and Jisoo Ok in the past few years, as well as Dr. Cora Swenson Lee and Dr. Lisa Caravan at
+                        summer music festivals. Click on the images below to view various recordings of my playing!
                     </div>
 
                     <div className="relative self-center h-1/4 w-5/6 min-[900px]:w-1/2 mb-10">

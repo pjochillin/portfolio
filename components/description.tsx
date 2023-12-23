@@ -1,5 +1,3 @@
-"use client"
-
 import Link from "next/link"
 import SkillBox from "./skill-box"
 import { useRef, useEffect } from "react"

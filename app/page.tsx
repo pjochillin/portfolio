@@ -43,14 +43,16 @@ export default function Home() {
         { isRotcOpen && <RotcModal closeRotcModal={closeRotcModal} /> ||
           isCelloOpen && <CelloModal closeCelloModal={closeCelloModal} /> }
       </div>
-      <div className='z-0 relative'> 
-        <Profile />
-      </div>
-      <div className='z-10 relative'>
-        <Description />
-      </div>
-      <div className='z-0 relative'>
-        <Works openRotcModal={openRotcModal} openCelloModal={openCelloModal} />
+      <div className='relative overflow-hidden'>
+        <div className='z-0 relative'> 
+          <Profile />
+        </div>
+        <div className='z-10 relative'>
+          <Description />
+        </div>
+        <div className='z-0 relative'>
+          <Works openRotcModal={openRotcModal} openCelloModal={openCelloModal} />
+        </div>
       </div>
       <div className='z-0 relative'>
         <Footer />
