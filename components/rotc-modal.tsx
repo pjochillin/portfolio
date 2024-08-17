@@ -60,9 +60,9 @@ export default function rotcModal({ closeRotcModal } : {closeRotcModal: () => vo
                 </div>
                 <div id="modalBottom" className="relative flex flex-col justify-center rounded-b-xl">
                     <div className="py-10 px-10 text-sm min-[750px]:text-base">
-                        As an MSI Cadet, I learned the basics of military tactics and movements. This includes land navigation, map reading, weapons assembly, and more.
+                        As an MSII Cadet, I learned the basics of military tactics and movements. This includes land navigation, map reading, weapons assembly, and more.
                             I also am familiarized with drill and ceremony and leadership among cadets. For physical fitness, I scored the highest out of all Cornell cadets on
-                            the Army Combat Fitness Test with a score of 591 out of a total 600 points.
+                            the Army Combat Fitness Test with a score of 595 out of a total 600 points.
                     </div>
 
                     <div className="relative self-center h-1/4 w-5/6 min-[900px]:w-1/2 mb-10">
