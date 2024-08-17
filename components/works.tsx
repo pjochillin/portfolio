@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 
 export default function works({ openRotcModal, openCelloModal } : { openRotcModal: () => void, openCelloModal: () => void }) {
     return (
@@ -23,7 +22,7 @@ export default function works({ openRotcModal, openCelloModal } : { openRotcModa
                     </div>
                 </div>
             </div>
-            <div className="min-[750px]:basis-4/12 min-[750px]:mr-[8%] flex flex-col content-start">
+            <div className="min-[750px]:basis-4/12 min-[750px]:mr-[8%] flex flex-col content-start space-y-24">
                 <div className="mt-16 min-[750px]:mt-0 min-[750px]:ml-[20%]">
                     <div className={`grayscale hover:grayscale-0 hover:cursor-pointer transition duration-500 ease-in-out`} onClick={openCelloModal}>
                         <Image
@@ -33,18 +32,17 @@ export default function works({ openRotcModal, openCelloModal } : { openRotcModa
                             alt=""
                         />
                     </div>
-                    <div className={`hidden`}>
-                        <ul>
-                            <li className="text-off_white font-medium p-2 text-center border-theme_gray">
-                                Selected Works
-                            </li>
-                            <li className="text-theme_gray p-2 text-center bg-dropdown_bg border-theme_gray border-2">
-                                <Link href="https://youtu.be/NZ7Zypkejeos" className="transition duration-300 ease-in-out hover:text-theme_green">L. van Beethoven - Cello Sonata No. 2, Op. 5 No. 2, II. Rondo. Allegro</Link>
-                            </li>
-                            <li className="text-theme_gray p-2 text-center bg-dropdown_bg border-theme_gray border-x-2 border-b-2">
-                                <Link href="https://youtu.be/-Sux4OGaQek" className="transition duration-300 ease-in-out hover:text-theme_green">J. S. Bach - Cello Suite No. 2 in D minor, BWV 1008, I. Prelude</Link>
-                            </li>
-                        </ul>
+                </div>
+                <div className="mt-16 min-[750px]:mt-0 min-[750px]:ml-[20%]">
+                    <div className={`grayscale hover:grayscale-0 hover:cursor-pointer transition duration-500 ease-in-out`}>
+                        <a target="_blank" href="https://cornellbigred.com/sports/mens-track-and-field/roster/josh-ochalek/78814">
+                            <Image
+                                src="/images/track-thumbnail.png"
+                                height={1150}
+                                width={998}
+                                alt=""
+                            />
+                        </a>
                     </div>
                 </div>
             </div>
