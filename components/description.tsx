@@ -48,7 +48,7 @@ export default function description() {
                     <h1 id="about" className="font-medium tracking-[0.3rem] text-theme_gray">— About</h1>
                     <h1 className="pt-7 text-2xl min-[1000px]:text-4xl text-secondary_white">About</h1>
                     <p className="text-theme_gray text-md min-[1000px]:text-lg mt-10 min-[1000px]:mt-24 min-[1100px]:mt-16 min-[1300px]:mt-10 leading-loose">
-                        My name is Joshua Ochalek. I am a second-year student at Cornell University studying Computer Science, Italian, and Music.
+                        My name is Joshua Ochalek. I am a student at Cornell University studying Computer Science and Italian.
                         I aspire to be both an innovator and mentor, someone who motivates others while creating the technology of the future. 
                     </p>
                 </div>
